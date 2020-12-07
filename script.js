@@ -165,6 +165,7 @@ function gettingNewPhotos() {
   fastScrollContainer.innerHTML = '';
   loader.hidden = false;
   cardContainer.innerHTML = '';
+  currentPhotoIndex = 0;
   getPhotos();
 }
 
@@ -172,5 +173,6 @@ function gettingNewPhotos() {
 rightArrow.addEventListener('click', slideRight);
 leftArrow.addEventListener('click', slideLeft);
 cardContainer.addEventListener('transitionend', removingCard);
-laodBtn.addEventListener('click', gettingNewPhotos)
+laodBtn.addEventListener('click', gettingNewPhotos);
 window.addEventListener('resize', gettingCardWidth);
+window.addEventListener('load', gettingCardWidth);
